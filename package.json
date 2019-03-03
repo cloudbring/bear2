@@ -1,0 +1,26 @@
+{
+  "name": "simple-bear",
+  "version": "1.0.0",
+  "description": "Simple version of take home Bear Sightings app for Dave.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cloudbring/simple-bear.git"
+  },
+  "keywords": [
+    "typescript",
+    "postgres",
+    "jest",
+    "express",
+    "supertest"
+  ],
+  "author": "Emmanuel Mwangi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cloudbring/simple-bear/issues"
+  },
+  "homepage": "https://github.com/cloudbring/simple-bear#readme"
+}
