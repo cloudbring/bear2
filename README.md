@@ -11,7 +11,7 @@ Your API should conform to the following spec:
 Example POST body:
 `{ bear_type: 'grizzly', notes: 'It was a big one!', zip_code: '90210', num_bears: 3 }`
 
-### GET /sighting/search ###
+### GET /sightings/search ###
 Return an array of sightings, include a unique ID with each.
 Supported query params, all optional
 `start_date` (inclusive) (default: all time)
@@ -147,6 +147,35 @@ Jest did not exit one second after the test run has completed.
 This usually means that there are asynchronous operations that weren't stopped in your tests. Consider running Jest with
 `--detectOpenHandles` to troubleshoot this issue.
 ```
+
+## Running the App
+The app is a JSON API on `localhost:3000`
+
+All three endpoints work. Note that search is at
+`GET /sightings/search` (plural sightings)
+
+This was a compromise because the handler for `GET /sighting/:id` was catching `search` 
+as an invalid `:id`.
+
+There are ways around this but, they require complexity so this solution seemed 
+quickest at the time.
+
+
+### POST /sighting ###
+Example POST body:
+`{ bear_type: 'grizzly', notes: 'It was a big one!', zip_code: '90210', num_bears: 3 }`
+
+### GET /sightings/search ###
+Return an array of sightings, include a unique ID with each.
+Supported query params, all optional
+`start_date` (inclusive) (default: all time)
+`end_date` (inclusive) (default: all time)
+`bear_type` (default: all types)
+`zip_code` (default: all zip codes)
+`sort` (default: created timestamp, ascending. only supported value is `num_bears`)
+
+### GET /sighting/:id ###
+Return a single sighting object queried by its ID
 
 
 ## Submission ##
